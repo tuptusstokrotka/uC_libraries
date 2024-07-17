@@ -36,14 +36,14 @@
  *              /\                  /  \
  * __RELEASE___/  \                /    \
  *                 \__MIDSTATE____/      \___MIDSTATE____
- *
+ *               |<---- hold_ms ---->|
  *
  * REPEAT:
  * // ---------------------------------------------------
  *                                    _______MIDSTATE________
  *         PRESS _____MIDSTATE_______/ HOLD
  *              /
- * __RELEASE___/
+ * __RELEASE___/ |<---- hold_ms ---->|
  *
  * @note if you decided to choose none to repeat, use default GetState() instead
  * Creating 2 functions was on purpose to let user use 2 methods in 1 projects

@@ -27,10 +27,10 @@ FastButtons::FastButtons(uint8_t portLetter, uint8_t pin, int hold){
             break;
     }
 
-    *this->ddr &= ~(1 << this->pin);  // Clear the bit to set as input
+    *this->ddr &= ~(1 << this->pin);                              // Clear the bit to set as input
 
     #ifdef PULLUP
-        *this->port |= (1 << this->pin);  // Enable pull-up resistor (optional)
+        *this->port |= (1 << this->pin);                          // Enable pull-up resistor (optional)
     #endif
 }
 
