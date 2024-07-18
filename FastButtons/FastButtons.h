@@ -52,7 +52,7 @@
 #define PRESS_REPEAT 1
 #define HOLD_REPEAT 1
 
-enum State{
+enum Btn_State{
   _unknown    = -1,
   _release    = 0,
   _press      = 1,
@@ -70,14 +70,14 @@ private:
 
   unsigned long press_time = 0;   // Press time in ms
 
-  State state = _release;         // Last Switch state
+  Btn_State state = _release;         // Last Switch state
 
 public:
     FastButtons(uint8_t portLetter, uint8_t pin, int hold = HOLD_MS_DEFAULT);
     ~FastButtons();
 
-    State GetState();
-    State GetStateRepeat();
+    Btn_State GetState();
+    Btn_State GetStateRepeat();
     unsigned long GetHoldingTime();
 };
 

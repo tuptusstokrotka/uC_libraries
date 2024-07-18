@@ -38,7 +38,7 @@ FastButtons::~FastButtons(){
 
 }
 
-State FastButtons::GetState(){
+Btn_State FastButtons::GetState(){
     /* BUTTON RELEASED */
     if((*this->pinReg & (1 << this->pin)) ? 1 : 0 == RELEASED){   // BUTTON RELEASED
         state = _release;
@@ -59,7 +59,7 @@ State FastButtons::GetState(){
     return _unknown;                                              // STATE REGISTERED ALREADY
 }
 
-State FastButtons::GetStateRepeat(){
+Btn_State FastButtons::GetStateRepeat(){
     /* BUTTON RELEASED */
     if((*this->pinReg & (1 << this->pin)) ? 1 : 0 == RELEASED){   // BUTTON RELEASED
         state = _release;
